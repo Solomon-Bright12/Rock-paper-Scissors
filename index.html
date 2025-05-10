@@ -1,54 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0"/>
-    <title>Game</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+  <title>Rock Paper Scissors Game</title>
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-    <div class="head">
-        <div class="wlc">
-            <div id="user"></div>
-            <p id="p"></p>
-        </div>
-        <div class="nav-links">
-            <a href="#home">how to play</a>
-            <a href="#signup">About Developers</a>
-        </div>
-        <div class="hamburger">
-            <div class="bar"></div>
-            <div class="bar"></div>
-        </div>
+
+  <div class="head">
+    <div class="wlc">
+      <div id="user"></div>
+      <p id="p">Player</p>
     </div>
-    <div class="container">
-        <h1>Welcome to Our Rock paper scissors game 🎯</h1>
-        <div class="Option">
-            <div>
-                <p>your choice</p>
-                <div class="yourChoice"></div>
-            </div>
-            <div>
-                <p>computer choice</p>
-                <div class="computerChoice">
-                    <p>processing...</p>
-                    <div class="rotating"></div>
-                </div>
-            </div>
-        </div>
-        <div class="result"> show resault here</div>
-        <div class="choices">
-            <fieldset>
-              <legend>choose</legend>
-              <button class="rock">Rock</button>
-              <button class="paper">Paper</button>
-              <button class="scissors">Scissors</button>
-            </fieldset>
-          </div>
-        
-        <!-- for restarting the game-->
-        <button>Reset Game</button>
+    <div class="nav-links">
+      <a href="#home" onclick="showTutorial()">How to play</a>
+      <a href="#signup" onclick="showDetail()">About Developers</a>
     </div>
-    <script src="script.js"></script>
+    <div class="hamburger">
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
+  </div>
+
+  <div class="container">
+    <h1>Welcome to Rock Paper Scissors 🎯</h1>
+    <div class="Option">
+      <div>
+        <p>Your Choice</p>
+        <div class="yourChoice"></div>
+      </div>
+      <div>
+        <p>Computer Choice</p>
+        <div class="computerChoice">
+          <p>Booting...</p>
+          <div class="rotating"></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="result"></div>
+
+    <div class="choices">
+      <fieldset>
+        <button class="choice rock" data-choice="rock">Rock</button>
+        <button class="choice paper" data-choice="paper">Paper</button>
+        <button class="choice scissors" data-choice="scissors">Scissors</button>
+      </fieldset>
+    </div>
+
+    <button class="reset-btn">Reset Game</button>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
